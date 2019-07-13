@@ -1,0 +1,21 @@
+fname = input("Enter file name: ")
+
+num_words = 0
+num_lines = 0
+k = 0
+
+with open(fname, 'r') as f:
+    for word in f:
+        words = word.split()
+        num_words += len(words)
+        for i in words:
+            for letter in i:
+                if(letter.isspace):
+                    k=k+1
+print("Number of Spaces:",k)
+print("Number of words:",num_words)
+with open(fname, 'r') as f:
+    for line in f:
+         num_lines += 1        
+
+print("Number of lines:",num_lines)
